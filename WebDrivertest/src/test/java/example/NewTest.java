@@ -10,8 +10,8 @@ import org.testng.annotations.Test;
 
 public class NewTest {		
 	    public WebDriver driver;	
-	    public static final String USERNAME = "coludapp";
-		public static final String ACCESS_KEY = "fbdcfc53-58bd-4046-ad89-909c3dbc7cbd";
+	    public static final String USERNAME = "AyushDam";
+		public static final String ACCESS_KEY = "f5cae068-fd7e-46b2-92c5-3b639ef8a721";
 		public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
 		@Test				
 		public void testEasy() {	
