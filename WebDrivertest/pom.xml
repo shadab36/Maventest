@@ -36,10 +36,10 @@
 
 		</dependency>
 		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.7.0</version>
 
-			<groupId>com.github.2gis.winium</groupId>
-			<artifactId>winium-webdriver</artifactId>
-			<version>0.1.0-1</version>
 		</dependency>
 		<dependency>
 
