@@ -1,13 +1,12 @@
 package example;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-
 
 public class NewTest {		
 	    public WebDriver driver;	
@@ -20,27 +19,27 @@ public class NewTest {
 		    String title = driver.getTitle();				 
 			Assert.assertTrue(title.contains("SIVVI.COM")); 		
 		}	
-		@BeforeTest
-		public void beforeTest() throws MalformedURLException {	
+	@BeforeTest
+		public void beforeTest()   {	
 			//System.setProperty("webdriver.chrome.driver", "F:\\Driver of All\\chromedriver.exe");
-		   // driver = new ChromeDriver();  
+		  //  driver = new ChromeDriver();  
+		try {
 			DesiredCapabilities caps = DesiredCapabilities.chrome();
 			caps.setCapability("platform", "Windows 10");
 			caps.setCapability("version", "64");
 			caps.setCapability("name", "My Desktop automation test");
 			// here is the sauce driver 
-			 driver = new RemoteWebDriver(new URL(URL), caps);
-			//
+			 driver = new RemoteWebDriver(new java.net.URL(URL), caps);
+		}catch(Exception e) {
+			
+		}
+//			//
 		}		
 		@AfterTest
 		public void afterTest() {
 			driver.close();			
 		}		
 }	
-
-
-
-
 
 
 
